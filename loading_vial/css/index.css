@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Montserrat');
+/* Colors */
+
+/*
+ALT WATERS
+#1 #C8E9A0
+#2 #F7A278
+#3 #A13D63
+#4 #FDE74C
+#5 #FF70A6
+
+/* Water: rgb(68, 236, 249) */
+
+/* Background: rgb(24, 31, 39) */
+
+/* Glass: rgb(220, 237, 245) */
+
+/*
+    Created by Danyon Edwards ;)
+*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Hide svg element only use it's effects */
+svg {
+    display: none;
+}
+
+
+/* Two main containers - use border to visualise */
+.loading-container {
+    width: 350px;
+    height: 350px;
+    background-color: rgb(24, 31, 39);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottle-container {
+    width: 80px;
+    height: 120px;
+    position: relative;
+    /* border: 1px yellowgreen solid; */
+}
+
+/* Lips of the bottle at the top */
+
+.bottle-lip::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 10px;
+    border: 4px rgb(220, 237, 245) solid;
+    border-top-left-radius: 100%;
+    border-right: none;
+    border-bottom: none;
+    transform: translateX(23px) translateY(-20%) skew(-10deg, -25deg) rotate(-45deg);
+}
+
+.bottle-lip::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 10px;
+    border: 4px rgb(220, 237, 245) solid;
+    border-top-right-radius: 100%;
+    border-left: none;
+    border-bottom: none;
+    right: 50%;
+    transform: translateX(17px) translateY(-20%) skew(10deg, 25deg) rotate(45deg);
+}
+
+/* Vial neck */
+
+.bottle-neck {
+    position: absolute;
+    height: 45px;
+    width: 18px;
+    left: 50%;
+    top: 6%;
+    transform: translateX(-50%);
+    border-right: rgb(220, 237, 245) solid 4px;
+    border-left: rgb(220, 237, 245) solid 4px;
+    background-color: transparent;
+}
+
+/* Top of the vial */
+
+.btop::before {
+    content: '';
+    position: absolute;
+    height: 28%;
+    width: 35%;
+    bottom: 34px;
+    left: -5%;
+    border: 4px rgb(220, 237, 245) solid;
+    border-top-left-radius: 100%;
+    border-right: none;
+    border-bottom: none;
+}
+
+.btop::after {
+    content: '';
+    position: absolute;
+    height: 28%;
+    width: 35%;
+    bottom: 34px;
+    right: -5%;
+    border: 4px rgb(220, 237, 245) solid;
+    border-top-right-radius: 100%;
+    border-left: none;
+    border-bottom: none;
+}
+
+
+/* Base of the vial */
+.bottle-base {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    border: rgb(220, 237, 245) solid 4px;
+    border-radius: 25px / 35px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top: none;
+    display: inline-block;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Base liquid underneath the waves */
+
+.liquid-container {
+    position: relative;
+    top: 72%;
+    height: 450%;
+    filter: url(#goo);
+}
+
+.liquid {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 58px;
+    border-radius: 25px / 35px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.94);
+    filter: url(#goo);
+}
+
+.liquid::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 56%;
+    background-color: rgb(68, 236, 249);
+}
+
+
+/* Waves */
+
+.wave {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 55px;
+    height: 42px;
+    background-color: rgb(68, 236, 249);
+    transform: skew(45deg, 45deg);
+}
+
+.wave-1 {
+    top: 25%;
+    left: -6%;
+    animation: wave-bounce 1010ms ease-in-out 0s infinite alternate;
+}
+
+.wave-2 {
+    top: 45%;
+    right: -6%;
+    animation: wave-bounce-2 1010ms ease-in-out 0s infinite alternate;
+}
+
+
+/* Customise the bubbles here */
+
+.bubble {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(68, 236, 249);
+    border-radius: 100%;
+    top: 10px;
+    z-index: 10px;
+    animation: bubble-move 2s ease-out infinite alternate;
+}
+
+.bubble:nth-of-type(1) {
+    left: 20px;
+    animation-delay: 300ms;
+    animation-duration: 2.2;
+}
+.bubble:nth-of-type(2) {
+    left: 60px;
+    width: 8px;
+    height: 8px;
+    animation-delay: 1200ms;
+}
+.bubble:nth-of-type(3) {
+    left: 50px;
+    width: 10px;
+    height: 10px;
+    animation-delay: 800ms;
+    animation-duration: 2.6;
+}
+.bubble:nth-of-type(4) {
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    transform: translateX(-50%);
+    animation: bubble-up-tube 3s ease-out 3.2s infinite alternate;
+    filter: url(#goo);
+}
+.bubble:nth-of-type(5) {
+    left: 12px;
+    height: 7px;
+    width: 7px;
+    animation-duration: 3.2s;
+    animation-delay: 800ms;
+}
+.bubble:nth-of-type(6) {
+    left: 50px;
+    animation-delay: 800ms;
+    animation-duration: 1.8s;
+}
+
+
+
+/* Bottom text */
+
+.text-container {
+    font-weight: 900px;
+    padding-top: 5px;
+    color: rgb(220, 237, 245);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+
+
+
+/* All animations */
+
+/* Wave bounce is for the two major waves */
+@keyframes wave-bounce {
+    from {
+        transform: translateY(0%);
+        border-radius: 50%;
+    }
+    to {
+        transform: translateY(30%);
+        border-radius: 35%;
+    }
+}
+
+@keyframes wave-bounce-2 {
+    from {
+        transform: translateY(0%);
+        border-radius: 35%;
+    }
+    to {
+        transform: translateY(-30%);
+        border-radius: 50%;
+    }
+}
+
+
+/* This is the standard bubble animation */
+@keyframes bubble-move {
+    0%,
+    80% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-40px);
+    }
+}
+
+/* This is the big bubble */
+@keyframes bubble-up-tube {
+    0%,
+    60% {
+        transform: translate(-50%, 0px);
+    }
+    100% {
+        transform: translate(-50%, -90px);
+    }
+}

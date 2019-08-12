@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Montserrat');
+
+/* Colors */
+/* Water: rgb(68, 236, 249) */
+/* Background: rgb(24, 31, 39) */
+/* Glass: rgb(220, 237, 245) */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.loading-container {
+    width: 350px;
+    height: 350px;
+    background-color: rgb(24, 31, 39);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    filter: url(#goo);
+
+    
+}
+
+.circle {
+    height: 50px;
+    width: 50px;
+    background-color: aliceblue;
+    border-radius: 25px;
+    display: block;
+}
+
+svg {
+    display: none;
+}

@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.container {
+    width: 600px;
+    height: 600px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.round {
+    position: absolute;
+    overflow: hidden;
+    height: 30px;
+    width: 100px;
+    border: 4px coral solid;
+    border-bottom-left-radius: 110px;
+    border-bottom-right-radius: 110px;
+    border-top: none;
+}
+
+/* .round::before {
+    position: absolute;
+    display: block;
+    left: -4px;
+    top: -4px;
+    content: '';
+    height: 100px;
+    width: 100px;
+    border: 4px coral solid;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-radius: 50%;
+} */

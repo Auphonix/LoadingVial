@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!-- Created by Danyon Edwards -->
+
+<html class="no-js">
+<!--<![endif]-->
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Loading Vial Attempt</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- The svg filter for the blur / contrast (The goo effect) -->
+    <svg>
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+</head>
+
+<body>
+    <div class="loading-container">
+        <div class="bottle-container">
+
+            <!-- The main part of the bottle -->
+            <div class="bottle-lip"></div>
+            <div class="bottle-neck"></div>
+            <div class="btop"></div>
+            <div class="bottle-base"></div>
+
+            <!-- Enter liquid modifications here -->
+            <div class="liquid-container">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="liquid">
+                    <div class="wave wave-1"></div>
+                    <div class="wave wave-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="text-container">
+            loading
+        </div>
+    </div>
+</body>
+
+</html>
