@@ -28,6 +28,10 @@ body {
     width: 100vw;
 }
 
+body > div {
+    margin: 50px 0;
+}
+
 /* Hide svg element only use it's effects */
 svg {
     display: none;
