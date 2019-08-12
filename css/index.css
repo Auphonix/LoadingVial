@@ -19,13 +19,20 @@ ALT WATERS
     Created by Danyon Edwards ;)
 */
 
+/* Flex has some sort of padding - This prevents y-scroll */
+html {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
 body {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    flex-grow: 1;
     height: 100vh;
-    width: 100vw;
+    background-color: #F7A278
 }
 
 /* Hide svg element only use it's effects */
@@ -43,6 +50,7 @@ svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .bottle-container {
